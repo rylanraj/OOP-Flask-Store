@@ -10,7 +10,9 @@ class Order(db.Model):
     # db.Column is a class that represents a column in a database table.
     id = db.Column(db.Integer, primary_key=True)
     total = mapped_column(Float(2), nullable=False, default=0)
+    # Get the customer_id from the Customer table (the primary key of the Customer table)
     customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False)
+    # Now we can access the customer object from the order object
     customer = relationship("Customer", back_populates="orders")
     items = relationship("ProductOrder", cascade="all, delete-orphan", back_populates="order")
     # Whenever an order is created, the created column will be set to the current time
