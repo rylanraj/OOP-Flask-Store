@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Orders</h1>
+{% for order in orders %}
+    {% set class_name = "pending" %}
+    {% if order.processed %}
+        {% set class_name = "processed" %}
+    {% endif %}
+    <p class="{{ class_name }}">{{ order.id }} {{ order.customer.name }}, Status:{{ class_name }}</p>
+    <a href="{{ url_for('api_html.order_detail', order_id=order.id) }}">View details</a>
+{% endfor %}
+{% endblock %}

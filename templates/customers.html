@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Customers</h1>
+{% for customer in customers %}
+<li>
+    <span>{{ customer.name }}</span>
+    <span>{{ customer.phone }}</span>
+    <span>, Balance : ${{ customer.balance }}</span>
+    <a href="{{ url_for('api_html.customer_detail', customer_id=customer.id) }}">View details</a>
+
+</li>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Order #{{ order.id }}</h1>
+<h2>Items</h2>
+{% for item in order.items %}
+    <p>{{ item.product.name }}, Quantity:{{ item.quantity }}</p>
+{% endfor %}
+<h2>Total</h2>
+<p>${{ order.total }}</p>
+    <form method="POST" action="{{ url_for('api_html.order_delete', order_id=order.id) }}">
+        <button type="submit">Delete</button>
+    </form>
+    <form method="POST" action="{{ url_for('api_html.order_process', order_id=order.id) }}">
+        <button type="submit">Process</button>
+    </form>
+{% endblock %}
