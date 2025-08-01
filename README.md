@@ -14,16 +14,17 @@ OOP-Flask-Store is a web application built with Python and Flask that demonstrat
 - Modular Python codebase for maintainability and extensibility
 - Example data and basic CRUD operations
 
-OOP-Flask-Store/
-│
-├── app.py           # Main Flask app entry point
-├── models.py        # OOP models for store entities
-├── routes/          # Route modules for Flask endpoints
-├── templates/       # Jinja2 HTML templates
-├── static/          # Static files (CSS, images)
-├── data/            # Sample data files
-├── README.md
-└── ...              # Additional scripts and files
+## Project Structure
+
+- OOP-Flask-Store/
+  - app.py &nbsp;&nbsp;&nbsp;&nbsp;# Main Flask app entry point
+  - models.py &nbsp;&nbsp;&nbsp;&nbsp;# OOP models for store entities
+  - routes/ &nbsp;&nbsp;&nbsp;&nbsp;# Route modules for Flask endpoints
+  - templates/ &nbsp;&nbsp;&nbsp;&nbsp;# Jinja2 HTML templates
+  - static/ &nbsp;&nbsp;&nbsp;&nbsp;# Static files (CSS, images)
+  - data/ &nbsp;&nbsp;&nbsp;&nbsp;# Sample data files
+  - README.md
+  - ... &nbsp;&nbsp;&nbsp;&nbsp;# Additional scripts and files
 
 ## Technologies Used
 
